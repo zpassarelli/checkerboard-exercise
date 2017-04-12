@@ -11,8 +11,6 @@ function divgen(color){
 }
 
 for(var i = 0; i < 27; i++){
-  //for(var j = 0; j < 5; j++){
-    document.body.appendChild(divgen('red'));
-    document.body.appendChild(divgen('black'));
-  //}
+  document.body.appendChild(divgen('red'));
+  document.body.appendChild(divgen('black'));
 }
