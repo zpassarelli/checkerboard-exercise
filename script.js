@@ -1,8 +1,8 @@
 var body = document.getElementsByTagName('body');
 
-function divgen(color){
+function divgen(red,green,blue){
   var newDiv = document.createElement('div');
-  newDiv.style.backgroundColor = color;
+  newDiv.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
   newDiv.style.width = '11.1%';
   newDiv.style.float = 'left';
   newDiv.style.paddingBottom = '11.1%';
@@ -10,9 +10,10 @@ function divgen(color){
   return newDiv;
 }
 
-for(var i = 0; i < 27; i++){
-  //for(var j = 0; j < 5; j++){
-    document.body.appendChild(divgen('red'));
-    document.body.appendChild(divgen('black'));
-  //}
+function randomColor() {
+  return Math.floor(Math.random() * 256);
+}
+
+for(var i = 0; i <= 53; i++){
+  document.body.appendChild(divgen(randomColor(),randomColor(),randomColor()));
 }
